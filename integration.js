@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 
-const request = require('request');
+const request = require('postman-request');
 const schedule = require('node-schedule');
 const async = require('async');
 
@@ -68,12 +68,16 @@ function _getUrlShortener(url) {
   let urlWithoutSchema = url.replace(/(http:\/\/|https:\/\/)/, '');
   // Split on `/` to get the FQDN which will be the first token
   let tokens = urlWithoutSchema.split('/');
-  if (tokens.length > 0) {
-    return tokens[0].trim().toLowerCase();
-  } else {
-    // Something went wrong so just return an empty string
-    return '';
-  }
+
+  // If something goes wrong so just return an empty string
+  return tokens.length > 0 ? 
+    tokens[0]
+      .trim()
+      .toLowerCase() 
+      .split('.')
+      .slice(-2)
+      .join('.') : 
+    '';
 }
 
 function doLookup(entities, options, cb) {
@@ -109,7 +113,10 @@ function doLookup(entities, options, cb) {
   entities.forEach((entity) => {
     const shortenerFqdn = _getUrlShortener(entity.value);
     if (!urlShorteners.has(shortenerFqdn)) {
-      Logger.debug({ entity: entity.value, fqdn: shortenerFqdn }, 'Ignoring non-shortened URL');
+      Logger.debug(
+        { entity: entity.value, fqdn: shortenerFqdn, urlShorteners: [...urlShorteners] },
+        'Ignoring non-shortened URL'
+      );
       return;
     }
 
