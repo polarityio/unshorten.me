@@ -13,6 +13,7 @@ bitly.com
 buff.ly
 buzurl.com
 cektkp.com
+clck.ru
 cur.lv
 cut.by
 cutt.ly
@@ -28,6 +29,7 @@ goo.gl
 hit.my
 hyperurl.co
 id.tl
+iii.im
 iplogger.com
 iplogger.org
 is.gd
@@ -68,6 +70,7 @@ u.bb
 u.to
 urlz.fr
 v.gd
+v.ht
 vzturl.com
 wp.me
 x.co
