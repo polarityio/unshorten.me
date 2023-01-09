@@ -1,0 +1,42 @@
+{
+  "name": "Unshorten.me",
+  "acronym": "UME",
+  "onDemandOnly": true,
+  "description": "Unshorten.me is a free service to Un-Shorten the URLs created by URL shortening services.",
+  "entityTypes": [
+    "url"
+  ],
+  "block": {
+    "component": {
+      "file": "./components/block.js"
+    },
+    "template": {
+      "file": "./templates/block.hbs"
+    }
+  },
+  "styles": [
+    "./styles/styles.less"
+  ],
+  "request": {
+    "cert": "",
+    "key": "",
+    "passphrase": "",
+    "ca": "",
+    "proxy": "",
+    "rejectUnauthorized": true
+  },
+  "logging": {
+    "level": "info"
+  },
+  "options": [
+    {
+      "key": "autoUpdate",
+      "name": "Enable Auto Update",
+      "description": "If checked, the integration will automatically update the list of valid url-shortener services from the MISP github repository every Sunday at 11:00 PM (polarity server time). This setting must be set to \"Only admins can view and edit\". The integration must be able to issue a GET request to the MISP github repo located at `https://github.com/MISP/misp-warninglists` for auto updating to work.",
+      "default": true,
+      "type": "boolean",
+      "userCanEdit": false,
+      "adminOnly": true
+    }
+  ]
+}
