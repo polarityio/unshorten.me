@@ -3,9 +3,8 @@
   "acronym": "UME",
   "onDemandOnly": true,
   "description": "Unshorten.me is a free service to Un-Shorten the URLs created by URL shortening services.",
-  "entityTypes": [
-    "url"
-  ],
+  "entityTypes": ["url"],
+  "defaultColor": "light-gray",
   "block": {
     "component": {
       "file": "./components/block.js"
@@ -14,9 +13,7 @@
       "file": "./templates/block.hbs"
     }
   },
-  "styles": [
-    "./styles/styles.less"
-  ],
+  "styles": ["./styles/styles.less"],
   "request": {
     "cert": "",
     "key": "",
