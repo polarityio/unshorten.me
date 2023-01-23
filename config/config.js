@@ -25,6 +25,7 @@ module.exports = {
    */
   description: 'Unshorten.me is a free service to Un-Shorten the URLs created by URL shortening services.',
   entityTypes: ['url'],
+  defaultColor: 'light-gray',
   /**
    * Provide custom component logic and template for rendering the integration details block.  If you do not
    * provide a custom template and/or component then the integration will display data as a table of key value

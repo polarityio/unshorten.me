@@ -1,7 +1,7 @@
 {
-  "main": "./integration.js",
   "name": "Unshorten.me",
-  "version": "3.0.1-beta",
+  "version": "3.0.2-beta",
+  "main": "./integration.js",
   "private": true,
   "scripts": {
     "update:urls": "node -e \"require('./lib/update-lists').run()\""
