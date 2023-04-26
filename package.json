@@ -1,6 +1,6 @@
 {
   "name": "Unshorten.me",
-  "version": "3.0.3-beta",
+  "version": "3.0.4",
   "main": "./integration.js",
   "private": true,
   "scripts": {
