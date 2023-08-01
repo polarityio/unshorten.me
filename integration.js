@@ -70,14 +70,7 @@ function _getUrlShortener(url) {
   let tokens = urlWithoutSchema.split('/');
 
   // If something goes wrong so just return an empty string
-  return tokens.length > 0 ? 
-    tokens[0]
-      .trim()
-      .toLowerCase() 
-      .split('.')
-      .slice(-2)
-      .join('.') : 
-    '';
+  return tokens.length > 0 ? tokens[0].trim().toLowerCase().split('.').slice(-2).join('.') : '';
 }
 
 function doLookup(entities, options, cb) {
@@ -128,8 +121,8 @@ function doLookup(entities, options, cb) {
 
     Logger.trace({ uri: requestOptions }, 'Request URI');
 
-    tasks.push(function(done) {
-      requestWithDefaults(requestOptions, function(error, res, body) {
+    tasks.push(function (done) {
+      requestWithDefaults(requestOptions, function (error, res, body) {
         if (error) {
           return done({
             detail: 'HTTP Request Error',

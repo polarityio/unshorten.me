@@ -24,7 +24,13 @@ module.exports = {
    * @optional
    */
   description: 'Unshorten.me is a free service to Un-Shorten the URLs created by URL shortening services.',
-  entityTypes: ['url'],
+  entityTypes: ['domain'],
+  customTypes: [
+    {
+      key: 'domain-url',
+      regex: /(https?:\/\/)?([a-zA-Z0-9-]{2,256})\.([a-z]{2,10})\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
+    }
+  ],
   defaultColor: 'light-gray',
   /**
    * Provide custom component logic and template for rendering the integration details block.  If you do not
@@ -58,7 +64,7 @@ module.exports = {
     ca: '',
     // An HTTP proxy to be used. Supports proxy Auth with Basic Auth, identical to support for
     // the url parameter (by embedding the auth info in the uri)
-    proxy: ""
+    proxy: ''
   },
   logging: {
     level: 'info' //trace, debug, info, warn, error, fatal

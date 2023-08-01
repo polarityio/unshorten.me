@@ -5,6 +5,12 @@
   "onDemandOnly": true,
   "description": "Unshorten.me is a free service to Un-Shorten the URLs created by URL shortening services.",
   "entityTypes": ["url"],
+  "customTypes": [
+    {
+      "key": "domain-url",
+      "regex": {}
+    }
+  ],
   "defaultColor": "light-gray",
   "block": {
     "component": {
