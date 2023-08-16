@@ -23,12 +23,11 @@ module.exports = {
    * @type String
    * @optional
    */
-  description: 'Unshorten.me is a free service to Un-Shorten the URLs created by URL shortening services.',
-  entityTypes: ['domain'],
+  description: 'Un-Shorten URLs created by URL shortening services using the unshorten.me API.',
   customTypes: [
     {
       key: 'domain-url',
-      regex: /(https?:\/\/)?([a-zA-Z0-9-]{2,256})\.([a-z]{2,10})\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
+      regex: /((https|http)?:\/\/)?([a-zA-Z0-9-]{1,256})\.([a-z]{2,10})\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
     }
   ],
   defaultColor: 'light-gray',
