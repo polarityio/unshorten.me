@@ -97,7 +97,6 @@ function doLookup(entities, options, cb) {
     updateListJob = schedule.scheduleJob(rule, async () => {
       Logger.info('Running automatic updating of MISP urlshortener list data');
       await updateList.run();
-      Logger.info('Reloading updated urlshortener list indicators');
       urlShorteners = await loadUrls();
       Logger.info(`Loaded ${urlShorteners.size} url shorteners`);
     });
