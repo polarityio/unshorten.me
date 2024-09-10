@@ -7,7 +7,7 @@
     "update:urls": "node -e \"require('./lib/update-lists').run()\""
   },
   "dependencies": {
-    "async": "^3.2.5",
+    "async": "^3.2.6",
     "node-schedule": "^2.1.1",
     "postman-request": "^2.88.1-postman.38"
   }
