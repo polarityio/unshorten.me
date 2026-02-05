@@ -1,0 +1,7 @@
+{
+  "requested_url": "https://bit.ly/3xK9pQ2",
+  "success": true,
+  "resolved_url": "https://malicious-phishing-site.example.com/login?redirect=steal-creds",
+  "usage_count": 7,
+  "remaining_calls": 3
+}
